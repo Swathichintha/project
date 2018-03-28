@@ -7,6 +7,8 @@
                 keypair=centos7
                 count=1
                 group_id=sg-93d261f8
+                ackey=AKIAIBVWWSICAZOFU2DQ
+                sekey=Jbkb7b/8DKPebfWzOqMq+4i3gf9nPLagu2f8Mtmg
                 wait=true
   register: ec2
 
