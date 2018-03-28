@@ -2,7 +2,7 @@
 - name: Spinup Instance 
   hosts: localhost
   user: centos
-  become: yes
+  become: no
   become_method: sudo
   
   roles:
@@ -12,7 +12,7 @@
   hosts: ec2hosts
   gather_facts: False
   user: centos
-  become: yes
+  become: no
   become_method: sudo
 
   vars_files:
