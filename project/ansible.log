@@ -1800,3 +1800,138 @@ exception: mapping values are not allowed in this context
 2018-03-27 22:11:25,446 p=17101 u=root |  PLAY RECAP *************************************************************************************************************************************************************
 2018-03-27 22:11:25,446 p=17101 u=root |  18.216.53.84               : ok=14   changed=13   unreachable=0    failed=0   
 2018-03-27 22:11:25,446 p=17101 u=root |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2018-04-07 05:37:57,538 p=1857 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with script plugin: problem running /root/project/ec2.py --list ([Errno 13] Permission denied)
+
+2018-04-07 05:37:57,538 p=1857 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with ini plugin: /root/project/ec2.py:3: Error parsing host definition ''''': No closing quotation
+
+2018-04-07 05:37:57,538 p=1857 u=root |   [WARNING]: Unable to parse /root/project/ec2.py as an inventory source
+
+2018-04-07 05:37:57,539 p=1857 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-04-07 05:37:57,540 p=1857 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-04-07 05:37:57,637 p=1857 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/project/roles/tomcatinstall/tasks/main.yml': line 55, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Deploy War File
+  ^ here
+
+
+The error appears to have been in '/root/project/roles/tomcatinstall/tasks/main.yml': line 55, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Deploy War File
+  ^ here
+
+2018-04-07 05:40:01,337 p=1873 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with script plugin: problem running /root/project/ec2.py --list ([Errno 13] Permission denied)
+
+2018-04-07 05:40:01,337 p=1873 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with ini plugin: /root/project/ec2.py:3: Error parsing host definition ''''': No closing quotation
+
+2018-04-07 05:40:01,337 p=1873 u=root |   [WARNING]: Unable to parse /root/project/ec2.py as an inventory source
+
+2018-04-07 05:40:01,338 p=1873 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-04-07 05:40:01,339 p=1873 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-04-07 05:40:01,570 p=1873 u=root |  PLAY [Spinup Instance] *************************************************************************************************************************************************
+2018-04-07 05:40:01,580 p=1873 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2018-04-07 05:40:02,226 p=1873 u=root |  ok: [localhost]
+2018-04-07 05:40:02,247 p=1873 u=root |  TASK [instance : Launching an EC2 Instance] ****************************************************************************************************************************
+2018-04-07 05:40:02,641 p=1873 u=root |  fatal: [localhost -> localhost]: FAILED! => {"changed": false, "msg": "No handler was ready to authenticate. 1 handlers were checked. ['HmacAuthV4Handler'] Check your credentials"}
+2018-04-07 05:40:02,642 p=1873 u=root |  	to retry, use: --limit @/root/project/site.retry
+
+2018-04-07 05:40:02,642 p=1873 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2018-04-07 05:40:02,643 p=1873 u=root |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-04-07 05:56:00,444 p=2224 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with script plugin: problem running /root/project/ec2.py --list ([Errno 13] Permission denied)
+
+2018-04-07 05:56:00,445 p=2224 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with ini plugin: /root/project/ec2.py:3: Error parsing host definition ''''': No closing quotation
+
+2018-04-07 05:56:00,445 p=2224 u=root |   [WARNING]: Unable to parse /root/project/ec2.py as an inventory source
+
+2018-04-07 05:56:00,445 p=2224 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-04-07 05:56:00,447 p=2224 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-04-07 05:56:00,690 p=2224 u=root |  PLAY [Spinup Instance] *************************************************************************************************************************************************
+2018-04-07 05:56:00,698 p=2224 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2018-04-07 05:56:01,350 p=2224 u=root |  ok: [localhost]
+2018-04-07 05:56:01,370 p=2224 u=root |  TASK [instance : Launching an EC2 Instance] ****************************************************************************************************************************
+2018-04-07 05:56:17,977 p=2224 u=root |  changed: [localhost -> localhost]
+2018-04-07 05:56:17,988 p=2224 u=root |  TASK [instance : Add all instance public IPs to host group] ************************************************************************************************************
+2018-04-07 05:56:18,025 p=2224 u=root |  changed: [localhost] => (item={u'kernel': None, u'root_device_type': u'ebs', u'private_dns_name': u'ip-172-31-43-131.us-east-2.compute.internal', u'public_ip': u'13.58.190.30', u'private_ip': u'172.31.43.131', u'id': u'i-0264ac9f80dbc65f9', u'ebs_optimized': False, u'state': u'running', u'virtualization_type': u'hvm', u'root_device_name': u'/dev/sda1', u'ramdisk': None, u'block_device_mapping': {u'/dev/sda1': {u'status': u'attached', u'delete_on_termination': False, u'volume_id': u'vol-094e7b6207d7b1da7'}}, u'key_name': u'centos', u'image_id': u'ami-e1496384', u'tenancy': u'default', u'groups': {u'sg-93d261f8': u'default'}, u'public_dns_name': u'ec2-13-58-190-30.us-east-2.compute.amazonaws.com', u'state_code': 16, u'tags': {}, u'placement': u'us-east-2c', u'ami_launch_index': u'0', u'dns_name': u'ec2-13-58-190-30.us-east-2.compute.amazonaws.com', u'region': u'us-east-2', u'launch_time': u'2018-04-07T05:56:02.000Z', u'instance_type': u't2.micro', u'architecture': u'x86_64', u'hypervisor': u'xen'})
+2018-04-07 05:56:18,051 p=2224 u=root |  TASK [instance : Wait for SSH to come up] ******************************************************************************************************************************
+2018-04-07 05:57:43,777 p=2224 u=root |  ok: [localhost -> localhost] => (item={u'kernel': None, u'root_device_type': u'ebs', u'private_dns_name': u'ip-172-31-43-131.us-east-2.compute.internal', u'public_ip': u'13.58.190.30', u'private_ip': u'172.31.43.131', u'id': u'i-0264ac9f80dbc65f9', u'ebs_optimized': False, u'state': u'running', u'virtualization_type': u'hvm', u'root_device_name': u'/dev/sda1', u'ramdisk': None, u'block_device_mapping': {u'/dev/sda1': {u'status': u'attached', u'delete_on_termination': False, u'volume_id': u'vol-094e7b6207d7b1da7'}}, u'key_name': u'centos', u'image_id': u'ami-e1496384', u'tenancy': u'default', u'groups': {u'sg-93d261f8': u'default'}, u'public_dns_name': u'ec2-13-58-190-30.us-east-2.compute.amazonaws.com', u'state_code': 16, u'tags': {}, u'placement': u'us-east-2c', u'ami_launch_index': u'0', u'dns_name': u'ec2-13-58-190-30.us-east-2.compute.amazonaws.com', u'region': u'us-east-2', u'launch_time': u'2018-04-07T05:56:02.000Z', u'instance_type': u't2.micro', u'architecture': u'x86_64', u'hypervisor': u'xen'})
+2018-04-07 05:57:43,784 p=2224 u=root |  PLAY [Install Tomcat & Deploy files] ***********************************************************************************************************************************
+2018-04-07 05:57:43,790 p=2224 u=root |  TASK [tomcatinstall : Install Java 1.8] ********************************************************************************************************************************
+2018-04-07 05:57:44,744 p=2224 u=root |  fatal: [13.58.190.30]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '13.58.190.30' (ECDSA) to the list of known hosts.\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0644 for './centos.pem' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"./centos.pem\": bad permissions\r\nPermission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n", "unreachable": true}
+2018-04-07 05:57:44,745 p=2224 u=root |  	to retry, use: --limit @/root/project/site.retry
+
+2018-04-07 05:57:44,745 p=2224 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2018-04-07 05:57:44,745 p=2224 u=root |  13.58.190.30               : ok=0    changed=0    unreachable=1    failed=0   
+2018-04-07 05:57:44,745 p=2224 u=root |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2018-04-07 06:01:17,682 p=2356 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with script plugin: problem running /root/project/ec2.py --list ([Errno 13] Permission denied)
+
+2018-04-07 06:01:17,683 p=2356 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with ini plugin: /root/project/ec2.py:3: Error parsing host definition ''''': No closing quotation
+
+2018-04-07 06:01:17,683 p=2356 u=root |   [WARNING]: Unable to parse /root/project/ec2.py as an inventory source
+
+2018-04-07 06:01:17,683 p=2356 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-04-07 06:01:17,685 p=2356 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-04-07 06:01:17,916 p=2356 u=root |  PLAY [Spinup Instance] *************************************************************************************************************************************************
+2018-04-07 06:01:17,924 p=2356 u=root |  TASK [Gathering Facts] *************************************************************************************************************************************************
+2018-04-07 06:01:18,574 p=2356 u=root |  ok: [localhost]
+2018-04-07 06:01:18,595 p=2356 u=root |  TASK [instance : Launching an EC2 Instance] ****************************************************************************************************************************
+2018-04-07 06:01:40,322 p=2356 u=root |  changed: [localhost -> localhost]
+2018-04-07 06:01:40,333 p=2356 u=root |  TASK [instance : Add all instance public IPs to host group] ************************************************************************************************************
+2018-04-07 06:01:40,370 p=2356 u=root |  changed: [localhost] => (item={u'kernel': None, u'root_device_type': u'ebs', u'private_dns_name': u'ip-172-31-40-189.us-east-2.compute.internal', u'public_ip': u'18.217.71.210', u'private_ip': u'172.31.40.189', u'id': u'i-04c7ea85bbac4da53', u'ebs_optimized': False, u'state': u'running', u'virtualization_type': u'hvm', u'root_device_name': u'/dev/sda1', u'ramdisk': None, u'block_device_mapping': {u'/dev/sda1': {u'status': u'attached', u'delete_on_termination': False, u'volume_id': u'vol-0666b3793140dacc3'}}, u'key_name': u'centos', u'image_id': u'ami-e1496384', u'tenancy': u'default', u'groups': {u'sg-93d261f8': u'default'}, u'public_dns_name': u'ec2-18-217-71-210.us-east-2.compute.amazonaws.com', u'state_code': 16, u'tags': {}, u'placement': u'us-east-2c', u'ami_launch_index': u'0', u'dns_name': u'ec2-18-217-71-210.us-east-2.compute.amazonaws.com', u'region': u'us-east-2', u'launch_time': u'2018-04-07T06:01:19.000Z', u'instance_type': u't2.micro', u'architecture': u'x86_64', u'hypervisor': u'xen'})
+2018-04-07 06:01:40,395 p=2356 u=root |  TASK [instance : Wait for SSH to come up] ******************************************************************************************************************************
+2018-04-07 06:03:09,132 p=2356 u=root |  ok: [localhost -> localhost] => (item={u'kernel': None, u'root_device_type': u'ebs', u'private_dns_name': u'ip-172-31-40-189.us-east-2.compute.internal', u'public_ip': u'18.217.71.210', u'private_ip': u'172.31.40.189', u'id': u'i-04c7ea85bbac4da53', u'ebs_optimized': False, u'state': u'running', u'virtualization_type': u'hvm', u'root_device_name': u'/dev/sda1', u'ramdisk': None, u'block_device_mapping': {u'/dev/sda1': {u'status': u'attached', u'delete_on_termination': False, u'volume_id': u'vol-0666b3793140dacc3'}}, u'key_name': u'centos', u'image_id': u'ami-e1496384', u'tenancy': u'default', u'groups': {u'sg-93d261f8': u'default'}, u'public_dns_name': u'ec2-18-217-71-210.us-east-2.compute.amazonaws.com', u'state_code': 16, u'tags': {}, u'placement': u'us-east-2c', u'ami_launch_index': u'0', u'dns_name': u'ec2-18-217-71-210.us-east-2.compute.amazonaws.com', u'region': u'us-east-2', u'launch_time': u'2018-04-07T06:01:19.000Z', u'instance_type': u't2.micro', u'architecture': u'x86_64', u'hypervisor': u'xen'})
+2018-04-07 06:03:09,139 p=2356 u=root |  PLAY [Install Tomcat & Deploy files] ***********************************************************************************************************************************
+2018-04-07 06:03:09,146 p=2356 u=root |  TASK [tomcatinstall : Install Java 1.8] ********************************************************************************************************************************
+2018-04-07 06:04:09,077 p=2356 u=root |  fatal: [18.217.71.210]: FAILED! => {"changed": false, "msg": "You need to be root to perform this command.\n", "rc": 1, "results": ["Loaded plugins: fastestmirror\n"]}
+2018-04-07 06:04:09,079 p=2356 u=root |  	to retry, use: --limit @/root/project/site.retry
+
+2018-04-07 06:04:09,079 p=2356 u=root |  PLAY RECAP *************************************************************************************************************************************************************
+2018-04-07 06:04:09,079 p=2356 u=root |  18.217.71.210              : ok=0    changed=0    unreachable=0    failed=1   
+2018-04-07 06:04:09,079 p=2356 u=root |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2018-04-10 02:15:06,907 p=1563 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with script plugin: problem
+running /root/project/ec2.py --list ([Errno 13] Permission denied)
+
+2018-04-10 02:15:06,908 p=1563 u=root |   [WARNING]:  * Failed to parse /root/project/ec2.py with ini plugin:
+/root/project/ec2.py:3: Error parsing host definition ''''': No closing
+quotation
+
+2018-04-10 02:15:06,908 p=1563 u=root |   [WARNING]: Unable to parse /root/project/ec2.py as an inventory source
+
+2018-04-10 02:15:06,908 p=1563 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-04-10 02:15:06,911 p=1563 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note
+that the implicit localhost does not match 'all'
+
+2018-04-10 02:15:07,455 p=1563 u=root |  PLAY [Spinup Instance] *********************************************************
+2018-04-10 02:15:07,472 p=1563 u=root |  TASK [Gathering Facts] *********************************************************
+2018-04-10 02:15:08,212 p=1563 u=root |  ok: [localhost]
+2018-04-10 02:15:08,234 p=1563 u=root |  TASK [instance : Launching an EC2 Instance] ************************************
+2018-04-10 02:15:24,875 p=1563 u=root |  changed: [localhost -> localhost]
+2018-04-10 02:15:24,887 p=1563 u=root |  TASK [instance : Add all instance public IPs to host group] ********************
+2018-04-10 02:15:24,927 p=1563 u=root |  changed: [localhost] => (item={u'kernel': None, u'root_device_type': u'ebs', u'private_dns_name': u'ip-172-31-39-1.us-east-2.compute.internal', u'public_ip': u'18.188.11.105', u'private_ip': u'172.31.39.1', u'id': u'i-0a97cc3ce8467eb36', u'ebs_optimized': False, u'state': u'running', u'virtualization_type': u'hvm', u'root_device_name': u'/dev/sda1', u'ramdisk': None, u'block_device_mapping': {u'/dev/sda1': {u'status': u'attached', u'delete_on_termination': False, u'volume_id': u'vol-056338e3257f29b14'}}, u'key_name': u'centos', u'image_id': u'ami-e1496384', u'tenancy': u'default', u'groups': {u'sg-93d261f8': u'default'}, u'public_dns_name': u'ec2-18-188-11-105.us-east-2.compute.amazonaws.com', u'state_code': 16, u'tags': {}, u'placement': u'us-east-2c', u'ami_launch_index': u'0', u'dns_name': u'ec2-18-188-11-105.us-east-2.compute.amazonaws.com', u'region': u'us-east-2', u'launch_time': u'2018-04-10T02:15:09.000Z', u'instance_type': u't2.micro', u'architecture': u'x86_64', u'hypervisor': u'xen'})
+2018-04-10 02:15:24,954 p=1563 u=root |  TASK [instance : Wait for SSH to come up] **************************************
+2018-04-10 02:16:25,292 p=1563 u=root |  ok: [localhost -> localhost] => (item={u'kernel': None, u'root_device_type': u'ebs', u'private_dns_name': u'ip-172-31-39-1.us-east-2.compute.internal', u'public_ip': u'18.188.11.105', u'private_ip': u'172.31.39.1', u'id': u'i-0a97cc3ce8467eb36', u'ebs_optimized': False, u'state': u'running', u'virtualization_type': u'hvm', u'root_device_name': u'/dev/sda1', u'ramdisk': None, u'block_device_mapping': {u'/dev/sda1': {u'status': u'attached', u'delete_on_termination': False, u'volume_id': u'vol-056338e3257f29b14'}}, u'key_name': u'centos', u'image_id': u'ami-e1496384', u'tenancy': u'default', u'groups': {u'sg-93d261f8': u'default'}, u'public_dns_name': u'ec2-18-188-11-105.us-east-2.compute.amazonaws.com', u'state_code': 16, u'tags': {}, u'placement': u'us-east-2c', u'ami_launch_index': u'0', u'dns_name': u'ec2-18-188-11-105.us-east-2.compute.amazonaws.com', u'region': u'us-east-2', u'launch_time': u'2018-04-10T02:15:09.000Z', u'instance_type': u't2.micro', u'architecture': u'x86_64', u'hypervisor': u'xen'})
+2018-04-10 02:16:25,299 p=1563 u=root |  PLAY [Install Tomcat & Deploy files] *******************************************
+2018-04-10 02:16:25,305 p=1563 u=root |  TASK [tomcatinstall : Install Java 1.8] ****************************************
+2018-04-10 02:16:38,713 p=1563 u=root |  fatal: [18.188.11.105]: FAILED! => {"changed": false, "msg": "You need to be root to perform this command.\n", "rc": 1, "results": ["Loaded plugins: fastestmirror\n"]}
+2018-04-10 02:16:38,714 p=1563 u=root |  	to retry, use: --limit @/root/project/site.retry
+
+2018-04-10 02:16:38,714 p=1563 u=root |  PLAY RECAP *********************************************************************
+2018-04-10 02:16:38,714 p=1563 u=root |  18.188.11.105              : ok=0    changed=0    unreachable=0    failed=1   
+2018-04-10 02:16:38,714 p=1563 u=root |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   

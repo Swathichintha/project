@@ -52,7 +52,7 @@
 - name: wait for tomcat to start
   wait_for: port={{http_port}}
 
-- name: Deploy War File
+#- name: Deploy War File
   
 
 #m aven_artifact: maven_artifact: group_id=org.sonatype.com artifact_id=simplewebapp extension=war repository_url=http://ec2-18.188.137.58.us-east-2.compute.amazonaws.com:8080/nexus/content/repository/releases/ username=admin password=admin123  dest=/usr/share/tomcat/webapps/ 
