@@ -1935,3 +1935,97 @@ that the implicit localhost does not match 'all'
 2018-04-10 02:16:38,714 p=1563 u=root |  PLAY RECAP *********************************************************************
 2018-04-10 02:16:38,714 p=1563 u=root |  18.188.11.105              : ok=0    changed=0    unreachable=0    failed=1   
 2018-04-10 02:16:38,714 p=1563 u=root |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2018-05-07 21:06:39,099 p=3195 u=root |   [WARNING]:  * Failed to parse /root/ansible/project/ec2.py with script plugin: problem running /root/ansible/project/ec2.py --list ([Errno 13] Permission
+denied)
+
+2018-05-07 21:06:39,099 p=3195 u=root |   [WARNING]:  * Failed to parse /root/ansible/project/ec2.py with ini plugin: /root/ansible/project/ec2.py:3: Error parsing host definition ''''': No closing
+quotation
+
+2018-05-07 21:06:39,100 p=3195 u=root |   [WARNING]: Unable to parse /root/ansible/project/ec2.py as an inventory source
+
+2018-05-07 21:06:39,100 p=3195 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-05-07 21:06:39,102 p=3195 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-05-07 21:06:39,402 p=3195 u=root |  PLAY [Spinup Instance] **************************************************************************************************************************************
+2018-05-07 21:06:39,417 p=3195 u=root |  TASK [Gathering Facts] **************************************************************************************************************************************
+2018-05-07 21:06:40,169 p=3195 u=root |  ok: [localhost]
+2018-05-07 21:06:40,194 p=3195 u=root |  TASK [instance : Launching an EC2 Instance] *****************************************************************************************************************
+2018-05-07 21:06:40,538 p=3195 u=root |  fatal: [localhost -> localhost]: FAILED! => {"changed": false, "msg": "boto required for this module"}
+2018-05-07 21:06:40,539 p=3195 u=root |  	to retry, use: --limit @/root/ansible/project/site.retry
+
+2018-05-07 21:06:40,539 p=3195 u=root |  PLAY RECAP **************************************************************************************************************************************************
+2018-05-07 21:06:40,539 p=3195 u=root |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-05-07 21:10:10,996 p=3343 u=root |   [WARNING]:  * Failed to parse /root/ansible/project/ec2.py with script plugin: problem running /root/ansible/project/ec2.py --list ([Errno 13] Permission
+denied)
+
+2018-05-07 21:10:10,996 p=3343 u=root |   [WARNING]:  * Failed to parse /root/ansible/project/ec2.py with ini plugin: /root/ansible/project/ec2.py:3: Error parsing host definition ''''': No closing
+quotation
+
+2018-05-07 21:10:10,996 p=3343 u=root |   [WARNING]: Unable to parse /root/ansible/project/ec2.py as an inventory source
+
+2018-05-07 21:10:10,997 p=3343 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-05-07 21:10:10,999 p=3343 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-05-07 21:10:11,263 p=3343 u=root |  PLAY [Spinup Instance] **************************************************************************************************************************************
+2018-05-07 21:10:11,274 p=3343 u=root |  TASK [Gathering Facts] **************************************************************************************************************************************
+2018-05-07 21:10:11,981 p=3343 u=root |  ok: [localhost]
+2018-05-07 21:10:12,006 p=3343 u=root |  TASK [instance : Launching an EC2 Instance] *****************************************************************************************************************
+2018-05-07 21:10:12,423 p=3343 u=root |  fatal: [localhost -> localhost]: FAILED! => {"changed": false, "msg": "No handler was ready to authenticate. 1 handlers were checked. ['HmacAuthV4Handler'] Check your credentials"}
+2018-05-07 21:10:12,425 p=3343 u=root |  	to retry, use: --limit @/root/ansible/project/site.retry
+
+2018-05-07 21:10:12,425 p=3343 u=root |  PLAY RECAP **************************************************************************************************************************************************
+2018-05-07 21:10:12,425 p=3343 u=root |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-05-07 21:27:59,676 p=3480 u=root |   [WARNING]:  * Failed to parse /root/ansible/project/ec2.py with script plugin: problem running /root/ansible/project/ec2.py --list ([Errno 13] Permission
+denied)
+
+2018-05-07 21:27:59,676 p=3480 u=root |   [WARNING]:  * Failed to parse /root/ansible/project/ec2.py with ini plugin: /root/ansible/project/ec2.py:3: Error parsing host definition ''''': No closing
+quotation
+
+2018-05-07 21:27:59,676 p=3480 u=root |   [WARNING]: Unable to parse /root/ansible/project/ec2.py as an inventory source
+
+2018-05-07 21:27:59,676 p=3480 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-05-07 21:27:59,679 p=3480 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-05-07 21:27:59,943 p=3480 u=root |  PLAY [Spinup Instance] **************************************************************************************************************************************
+2018-05-07 21:27:59,955 p=3480 u=root |  TASK [Gathering Facts] **************************************************************************************************************************************
+2018-05-07 21:28:00,623 p=3480 u=root |  ok: [localhost]
+2018-05-07 21:28:00,649 p=3480 u=root |  TASK [instance : Launching an EC2 Instance] *****************************************************************************************************************
+2018-05-07 21:28:01,168 p=3480 u=root |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: <Response><Errors><Error><Code>InvalidGroup.NotFound</Code><Message>The security group 'sg-93d261f8' does not exist</Message></Error></Errors><RequestID>bc132c30-a177-4ef9-903f-f88dbf035704</RequestID></Response>
+2018-05-07 21:28:01,169 p=3480 u=root |  fatal: [localhost -> localhost]: FAILED! => {"changed": false, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_I60dyt/ansible_module_ec2.py\", line 1770, in <module>\n    main()\n  File \"/tmp/ansible_I60dyt/ansible_module_ec2.py\", line 1754, in main\n    (instance_dict_array, new_instance_ids, changed) = create_instances(module, ec2, vpc)\n  File \"/tmp/ansible_I60dyt/ansible_module_ec2.py\", line 1092, in create_instances\n    grp_details = ec2.get_all_security_groups(group_ids=group_id)\n  File \"/usr/lib/python2.7/site-packages/boto/ec2/connection.py\", line 2984, in get_all_security_groups\n    [('item', SecurityGroup)], verb='POST')\n  File \"/usr/lib/python2.7/site-packages/boto/connection.py\", line 1186, in get_list\n    raise self.ResponseError(response.status, response.reason, body)\nboto.exception.EC2ResponseError: EC2ResponseError: 400 Bad Request\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Response><Errors><Error><Code>InvalidGroup.NotFound</Code><Message>The security group 'sg-93d261f8' does not exist</Message></Error></Errors><RequestID>bc132c30-a177-4ef9-903f-f88dbf035704</RequestID></Response>\n", "module_stdout": "", "msg": "MODULE FAILURE", "rc": 1}
+2018-05-07 21:28:01,170 p=3480 u=root |  	to retry, use: --limit @/root/ansible/project/site.retry
+
+2018-05-07 21:28:01,170 p=3480 u=root |  PLAY RECAP **************************************************************************************************************************************************
+2018-05-07 21:28:01,170 p=3480 u=root |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2018-05-07 21:33:57,624 p=3581 u=root |   [WARNING]:  * Failed to parse /root/ansible/project/ec2.py with script plugin: problem running /root/ansible/project/ec2.py --list ([Errno 13] Permission
+denied)
+
+2018-05-07 21:33:57,624 p=3581 u=root |   [WARNING]:  * Failed to parse /root/ansible/project/ec2.py with ini plugin: /root/ansible/project/ec2.py:3: Error parsing host definition ''''': No closing
+quotation
+
+2018-05-07 21:33:57,624 p=3581 u=root |   [WARNING]: Unable to parse /root/ansible/project/ec2.py as an inventory source
+
+2018-05-07 21:33:57,625 p=3581 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2018-05-07 21:33:57,627 p=3581 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2018-05-07 21:33:57,891 p=3581 u=root |  PLAY [Spinup Instance] **************************************************************************************************************************************
+2018-05-07 21:33:57,903 p=3581 u=root |  TASK [Gathering Facts] **************************************************************************************************************************************
+2018-05-07 21:33:58,596 p=3581 u=root |  ok: [localhost]
+2018-05-07 21:33:58,621 p=3581 u=root |  TASK [instance : Launching an EC2 Instance] *****************************************************************************************************************
+2018-05-07 21:34:20,614 p=3581 u=root |  changed: [localhost -> localhost]
+2018-05-07 21:34:20,628 p=3581 u=root |  TASK [instance : Add all instance public IPs to host group] *************************************************************************************************
+2018-05-07 21:34:20,664 p=3581 u=root |  changed: [localhost] => (item={u'kernel': None, u'root_device_type': u'ebs', u'private_dns_name': u'ip-172-31-38-134.us-east-2.compute.internal', u'public_ip': u'18.216.28.21', u'private_ip': u'172.31.38.134', u'id': u'i-00b1a766a44bfc98e', u'ebs_optimized': False, u'state': u'running', u'virtualization_type': u'hvm', u'root_device_name': u'/dev/sda1', u'ramdisk': None, u'block_device_mapping': {u'/dev/sda1': {u'status': u'attached', u'delete_on_termination': False, u'volume_id': u'vol-0036f21442b0ef549'}}, u'key_name': u'cicd_new', u'image_id': u'ami-994575fc', u'tenancy': u'default', u'groups': {u'sg-14563c7f': u'default'}, u'public_dns_name': u'ec2-18-216-28-21.us-east-2.compute.amazonaws.com', u'state_code': 16, u'tags': {}, u'placement': u'us-east-2c', u'ami_launch_index': u'0', u'dns_name': u'ec2-18-216-28-21.us-east-2.compute.amazonaws.com', u'region': u'us-east-2', u'launch_time': u'2018-05-07T21:33:59.000Z', u'instance_type': u't2.micro', u'architecture': u'x86_64', u'hypervisor': u'xen'})
+2018-05-07 21:34:20,694 p=3581 u=root |  TASK [instance : Wait for SSH to come up] *******************************************************************************************************************
+2018-05-07 21:35:21,026 p=3581 u=root |  ok: [localhost -> localhost] => (item={u'kernel': None, u'root_device_type': u'ebs', u'private_dns_name': u'ip-172-31-38-134.us-east-2.compute.internal', u'public_ip': u'18.216.28.21', u'private_ip': u'172.31.38.134', u'id': u'i-00b1a766a44bfc98e', u'ebs_optimized': False, u'state': u'running', u'virtualization_type': u'hvm', u'root_device_name': u'/dev/sda1', u'ramdisk': None, u'block_device_mapping': {u'/dev/sda1': {u'status': u'attached', u'delete_on_termination': False, u'volume_id': u'vol-0036f21442b0ef549'}}, u'key_name': u'cicd_new', u'image_id': u'ami-994575fc', u'tenancy': u'default', u'groups': {u'sg-14563c7f': u'default'}, u'public_dns_name': u'ec2-18-216-28-21.us-east-2.compute.amazonaws.com', u'state_code': 16, u'tags': {}, u'placement': u'us-east-2c', u'ami_launch_index': u'0', u'dns_name': u'ec2-18-216-28-21.us-east-2.compute.amazonaws.com', u'region': u'us-east-2', u'launch_time': u'2018-05-07T21:33:59.000Z', u'instance_type': u't2.micro', u'architecture': u'x86_64', u'hypervisor': u'xen'})
+2018-05-07 21:35:21,033 p=3581 u=root |  PLAY [Install Tomcat & Deploy files] ************************************************************************************************************************
+2018-05-07 21:35:21,040 p=3581 u=root |  TASK [tomcatinstall : Install Java 1.8] *********************************************************************************************************************
+2018-05-07 21:35:27,939 p=3581 u=root |  fatal: [18.216.28.21]: FAILED! => {"changed": false, "msg": "You need to be root to perform this command.\n", "rc": 1, "results": ["Loaded plugins: fastestmirror\n"]}
+2018-05-07 21:35:27,940 p=3581 u=root |  	to retry, use: --limit @/root/ansible/project/site.retry
+
+2018-05-07 21:35:27,940 p=3581 u=root |  PLAY RECAP **************************************************************************************************************************************************
+2018-05-07 21:35:27,940 p=3581 u=root |  18.216.28.21               : ok=0    changed=0    unreachable=0    failed=1   
+2018-05-07 21:35:27,941 p=3581 u=root |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2018-05-07 21:36:15,811 p=3703 u=root |  ERROR! You must specify a playbook file to run
